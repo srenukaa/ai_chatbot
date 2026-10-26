@@ -1,0 +1,14 @@
+{
+  "name": "vulture-review-desk",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Internship project review desk for Vulture Management Wings: roster intake, review sessions, AI analysis and debrief emails.",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=20.12"
+  }
+}

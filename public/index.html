@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vulture Review Desk</title>
+  <meta name="description" content="Internship project review desk for Vulture Management Wings: roster intake, review sessions, AI-assisted feedback and debrief emails.">
+  <meta name="theme-color" content="#26352a">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#view">Skip to content</a>
+  <div class="grain" aria-hidden="true"></div>
+
+  <div class="app" id="app">
+    <aside class="rail" aria-label="Review desk navigation">
+      <a class="brand" href="/" data-link aria-label="Vulture Review Desk home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64" role="presentation">
+            <path d="M10 17L32 49L54 17" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M18 17L32 38L46 17" fill="none" stroke="#c9502b" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M27 17L32 26L37 17" fill="none" stroke="#aeb7a3" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span class="brand-word"><strong>VULTURE</strong><span>Management Wings</span></span>
+      </a>
+
+      <div class="rail-label">Review operations</div>
+      <nav class="rail-nav" aria-label="Primary">
+        <a href="/" data-link data-nav="dashboard">
+          <span class="nav-icon" data-icon="grid"></span><span class="nav-name">Overview</span><span class="nav-index">01</span>
+        </a>
+        <a href="/roster" data-link data-nav="roster">
+          <span class="nav-icon" data-icon="users"></span><span class="nav-name">Roster</span><span class="nav-index">02</span>
+        </a>
+        <a href="/upload" data-link data-nav="upload">
+          <span class="nav-icon" data-icon="upload"></span><span class="nav-name">Roster intake</span><span class="nav-index">03</span>
+        </a>
+        <a href="/outbox" data-link data-nav="outbox">
+          <span class="nav-icon" data-icon="mail"></span><span class="nav-name">Outbox</span><span class="nav-index">04</span>
+        </a>
+        <a href="/settings" data-link data-nav="settings">
+          <span class="nav-icon" data-icon="settings"></span><span class="nav-name">Settings</span><span class="nav-index">05</span>
+        </a>
+      </nav>
+
+      <div class="rail-rule"></div>
+      <div class="rail-meta">
+        <div class="mono">Desk / 2026</div>
+        <p>Internship reviews, from roster to written debrief.</p>
+      </div>
+
+      <div class="rail-foot">
+        <div class="rail-chip" id="rail-mode">
+          <span class="dot"></span>
+          <span id="rail-mode-text">Checking mail mode</span>
+        </div>
+        <div class="rail-user">
+          <span class="rail-avatar" aria-hidden="true">VW</span>
+          <span><strong>Vulture Wings</strong><small>HR review desk</small></span>
+        </div>
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar" id="topbar">
+        <div class="topbar-left">
+          <span class="crumb-mark" aria-hidden="true"></span>
+          <span id="breadcrumb">Overview</span>
+        </div>
+        <div class="topbar-right">
+          <span class="topbar-date" id="topbar-date"></span>
+          <a href="/upload" class="btn btn-sm btn-dark" data-link>
+            <span data-icon="plus"></span> Upload roster
+          </a>
+        </div>
+      </header>
+
+      <div class="test-banner" id="test-banner" hidden>
+        <span class="test-banner-label">Test mode</span>
+        <span id="test-banner-text">All outbound mail is redirected to the test address.</span>
+        <a href="/settings" data-link>Change in settings <span data-icon="arrow-right"></span></a>
+      </div>
+
+      <main id="view" class="view" tabindex="-1">
+        <div class="page-loader">
+          <span class="spinner"></span>
+          <span class="mono">Opening the review desk</span>
+        </div>
+      </main>
+
+      <footer class="footer" id="footer">
+        <span>Vulture Management Wings · Intern review desk</span>
+        <span class="footer-mono">Intake → Invite → Review → Debrief</span>
+      </footer>
+    </div>
+  </div>
+
+  <div id="modal-root"></div>
+  <div id="toast-root" class="toast-root" role="status" aria-live="polite"></div>
+
+  <script src="/app.js" type="module"></script>
+</body>
+</html>
